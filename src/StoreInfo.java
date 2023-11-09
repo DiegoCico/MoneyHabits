@@ -7,6 +7,7 @@ public class StoreInfo {
     public StoreInfo(Account ac, SignUp sl){
         a = ac;
         l = sl;
+
     }
 
     public SignUp getSignup(){

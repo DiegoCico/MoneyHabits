@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class UI {
@@ -10,11 +9,11 @@ public class UI {
         String GREEN = "\u001B[32m";
 
         int id = -1;
+        Homepage homeP = new Homepage();
         Scanner in = new Scanner(System.in);
 
         System.out.println("1. Create Account");
         System.out.println("2. Log In");
-        System.out.println(st);
 
         int c = in.nextInt();
         if(c==1){
@@ -27,6 +26,8 @@ public class UI {
                 menu();
             }
             System.out.println(GREEN+"Welcome " + st.get(id).getAccount().getName()+RESET);
+            if(homeP.home(st.get(id)) == -1)
+                st.remove(id);
 
         }
     }
@@ -52,7 +53,7 @@ public class UI {
         int age = in.nextInt();
         System.out.println("Occupation");
         String job = in.next();
-        System.out.println("Income");
+        System.out.println("Income Monthly");
         int income = in.nextInt();
         System.out.println("Are you a student");
         String studentString = in.next();

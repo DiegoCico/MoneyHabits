@@ -5,6 +5,9 @@ public class Account {
     private String job;
     private int income;
     private boolean student;
+
+    private int id;
+
     public Account(String n, int a, String j, int i, boolean s){
         name = n;
         age = a;
